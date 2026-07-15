@@ -1,0 +1,39 @@
+# AegisHeuristics - Doxygen Minimal Configuration
+
+# Project Setup
+PROJECT_NAME           = "AegisHeuristics"
+PROJECT_BRIEF          = "2D Rectangular Packing Optimizer - DOD Architecture"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+
+# Input Files
+INPUT                  = README.md include/ src/
+RECURSIVE              = YES
+FILE_PATTERNS          = *.hpp *.cpp *.md
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# Extraction Behavior
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+OPTIMIZE_OUTPUT_FOR_C  = YES # Ideal for our DOD / Struct-based architecture
+
+# Graph Generation (Requires Graphviz/dot)
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+DIRECTORY_GRAPH        = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+
+# HTML Output
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_TIMESTAMP         = YES
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+
+# Disable LaTeX (We will use Typst for the scientific report)
+GENERATE_LATEX         = NO
